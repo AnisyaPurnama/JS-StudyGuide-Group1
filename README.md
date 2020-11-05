@@ -3,7 +3,7 @@
 ### About The Project
 Build accessible javaScript website tutorial. This project is made for learning purpose HackYourFuture module debugging.
 
-[Development Strategy](./development-strategy.md)
+[Development Strategy](https://github.com/AnisyaPurnama/JS-StudyGuide-Group1/blob/master/planning/development-strategy.md)
 
 ### Team Member (GROUP 1)
 - [Arphine](https://github.com/Ina-arpine)
