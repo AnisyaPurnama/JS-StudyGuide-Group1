@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Study Guide: js</title>
+    <!--using js scripts---------------->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src='/js/lib/prettier/standalone.js'></script>
+    <script src='/js/lib/prettier/parser-babel.js'></script>
+    <script>
+        var require = {
+            paths: {
+                'vs': '/js/lib/monaco/min/vs'
+            }
+        };
+    </script>
+    <script src="/js/lib/monaco/min/vs/loader.js"></script>
+    <script src="/js/lib/monaco/min/vs/editor/editor.main.nls.js"></script>
+    <script src="/js/lib/monaco/min/vs/editor/editor.main.js"></script>
+    <script src='/js/lib/wc-code-along.js'></script>
+    <script src='/js/lib/prism/prism.js'></script>
+    <!--using css---------------->
+    <link rel="stylesheet" data-name="vs/editor/editor.main" href="/js/lib/monaco/min/vs/editor/editor.main.css">
+    <link rel="stylesheet" href="/js/lib/prism/prism.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flexboxgrid.css">
+</head>
+
+<body>
+    <!-------------------- HEADER -------------------->
+    <header>
+        <nav id="main-header">
+            <!--Logo--->
+            <a href="index.html" class="logo">
+                <spin class="js">js;</spin>Study Giude</a>
+            <!-------------------- navbar Sections --------------------------->
+            <div class="toggle"></div>
+            <ul class="nbsec">
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="control-flow.html">Control Flow</a></li>
+                <li><a href="functions.html">Functions</a></li>
+                <li><a href="objects.html">Objects</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-------------------- Main Part -------------------->
+    <div class="container main">
+        <ul class="js-ques">
+            <li class="js-article">
+                <div class="row center-xs ccenter-sm center-md center-lg">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2>What is JavaScript?</h2>
+                    </div>
+                </div>
+                <p>JavaScript is a powerful and flexible programming language. It can execute on a web browser that allows us to make interactive webpages such as popup menus, animations, form validation, etc.</p>
+                <ul>
+                    <li>
+                        <spin class="js-li">Prototype based Object-oriented</spin>- JavaScript is an object-oriented programming language. It used prototypes instead of classes. Objects are used to represent the real-world entity in the program.</li>
+                    <li>
+                        <spin class="js-li">Interpreted Language</spin> - JavaScript is an interpreted programming language. It uses just-in-time compilation technique at run-time.</li>
+                    <li>
+                        <spin class="js-li">Event-Based Programming</spin> - JavaScript allows us to write codes that are executed differently under different events.</li>
+                    <li>
+                        <spin class="js-li">Platform Independence</spin> - JavaScript codes are run on browsers. So irrespective of the machine, if the browser supports JavaScript, codes can run.</li>
+                </ul>
+            </li>
+            <li class="js-article">
+                <div class="row center-xs ccenter-sm center-md center-lg">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2>Why learn JavaScript?</h2>
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        <spin class="js-li">JavaScript</spin> is both client-side and server-side programming language. In the client-side, the code is run and displayed by the browser. On the server-side, Node.js is used.</li>
+                    <li>
+                        <spin class="js-li">JavaScript</spin> is a platform-independent language. Any browser supporting JavaScript can run the code irrespective of the operating system</li>
+                    <li>
+                        <spin class="js-li">JavaScript</spin> uses the
+                        <spin class="js-li">just-in-time compilation</spin> technique. Since the compilation is handled at run time, JavaScript is considered an interpreted language.</li>
+                    <li>
+                        <spin class="js-li">JavaScript</spin> is a dynamically typed language. That is, a variable containing number may be reassigned to a string.</li>
+                </ul>
+            </li>
+            <li class="js-article">
+                <div class="row center-xs ccenter-sm center-md center-lg">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2>JavaScript study guide, what is it?</h2>
+                    </div>
+                </div>
+                <p>In this study guide we text-based programming language used both on the client-side and server-side that allows you to make web pages interactive. Where HTML and CSS are languages that give structure and style to web pages, JavaScript
+                    gives web pages interactive elements that engage a user.</p>
+            </li>
+            <li class="js-article">
+                <div class="row center-xs ccenter-sm center-md center-lg">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2>JavaScript references</h2>
+                    </div>
+                </div>
+                <p> <a href="https://github.com/getify/You-Dont-Know-JS"><span class="mark">You Don't Know JS</span></a> and <a href="https://eloquentjavascript.net/"><span class="mark">Eloquent JavaScript</span></a> are two of the best free books to get
+                    started with JavaScript.
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    <!-------------------- FOOTER -------------------->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="row center-xs center-sm center-md center-lg">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-github"></i>
+                    <i class="fa fa-map-marker"></i>
+                    <i class="fa fa-envelope-o"></i></div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/JQuery3.3.1.js"></script>
+    <script type="text/javascript">
+        /*Responsive Navigation*/
+        $(document).ready(function() {
+            $('.toggle').click(function() {
+                $('.toggle').toggleClass('active')
+
+                $('nav ul').toggleClass('active-menu')
+
+
+            })
+        });
+    </script>
+</body>
+
+</html>
+
+</html>

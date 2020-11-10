@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Study Guide: Tutorials</title>
+    <!--using js scripts---------------->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src='/js/lib/prettier/standalone.js'></script>
+    <script src='/js/lib/prettier/parser-babel.js'></script>
+    <script>
+        var require = {
+            paths: {
+                'vs': '/js/lib/monaco/min/vs'
+            }
+        };
+    </script>
+    <script src="/js/lib/monaco/min/vs/loader.js"></script>
+    <script src="/js/lib/monaco/min/vs/editor/editor.main.nls.js"></script>
+    <script src="/js/lib/monaco/min/vs/editor/editor.main.js"></script>
+    <script src='/js/lib/wc-code-along.js'></script>
+    <script src='/js/lib/prism/prism.js'></script>
+    <!--using css---------------->
+    <link rel="stylesheet" data-name="vs/editor/editor.main" href="/js/lib/monaco/min/vs/editor/editor.main.css">
+    <link rel="stylesheet" href="/js/lib/prism/prism.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flexboxgrid.css">
+</head>
+
+<body class="line-numbers">
+
+    <!-------------------- HEADER -------------------->
+
+    <header>
+        <nav id="main-header">
+
+            <!--Logo--->
+
+            <a href="index.html" class="logo">
+                <spin class="js">js;</spin>Study Giude</a>
+
+            <!-------------------- navbar Sections --------------------------->
+
+            <div class="toggle"></div>
+            <ul class="nbsec">
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="control-flow.html">Control Flow</a></li>
+                <li><a href="functions.html">Functions</a></li>
+                <li><a href="objects.html">Objects</a></li>
+                <li class="current"><a href="tutorials.html">Tutorials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-------------------- Main Part -------------------->
+
+
+    <section class="code-part main">
+        <div class="container">
+            <aside class="sidebar">
+                <div class="code-block">
+                    <h2 class="page-title">Tutorials</h2>
+                    <ul>
+                        <!--Here just you want to take the href name of the section and paste it down-->
+                        <li><a href="#jsclos"><i class="far fa-code"></i> JS Closure</a></li>
+                        <li><a href="#jsdatime"><i class="far fa-code"></i> JS Date and Time</a></li>
+                        <li><a href="#json"><i class="far fa-code"></i> JS JSON</a></li>
+                        <li><a href="#setinter"><i class="far fa-code"></i> JS setInterval()</a></li>
+                        <li><a href="#settimeout"><i class="far fa-code"></i> JS setTimeout()</a></li>
+                        <li><a href="#callback"><i class="far fa-code"></i> JS CallBack CallBack</a></li>
+                        <li><a href="#asyncawait"><i class="far fa-code"></i> JS async/await</a></li>
+                        <li><a href="#regexp"><i class="far fa-code"></i> JS Regular Expressions</a></li>
+                        <li><a href="#usestrict"><i class="far fa-code"></i> JS 'use strict'</a></li>
+                        <li><a href="#brodebug"><i class="far fa-code"></i> JS Browser Debugging</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+
+            <!-------------------- You can start working (copy and paste) and changing the subtitles from here -------------------->
+
+            <article class="main-col">
+                <!-------------------- New section -------------------->
+                <!--To create new section copy from this line to the line I mention down-->
+                <div class="code-block">
+                    <h1 class="page-title">
+                        <!--Here paste the href you copy from above in place of ___ in id="___"-->
+                        <!--Also here  you should write the subtitle in the section in white color if you use vsc-->
+                        <span id="jsComments">subsection title</span>
+                    </h1>
+                    <!--This is the main statment -->
+                    <p class="hline">
+                        main statement
+                    </p>
+                    <article class="code-article hline">
+                        There are two ways to add comments to code:
+                        <ul>
+                            <li><code>//</code> - Single Line Comments</li>
+                        </ul>
+                    </article>
+
+                    <!-------------------- New subsection -------------------->
+                    <!--To create new subsection copy from this line to the line I mention down-->
+                    <article class="code-article hline">
+                        <!--Here the sub-subtitle in the section between h4-->
+
+                        <h4>Subsubsection title </h4>
+                        Explanation <code>//</code> is a comment. For example,
+                        <ul>
+
+                            <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+
+                            <code-along src='/js/snippets/01.introduction/001.js' js-tutor></code-along>
+                            <pre data-src='/js/snippets/01.introduction/001.js'></pre>
+                            <br> Here, <code>// printing name on the console</code> is a comment.</br>
+                            <br> You can also use single like comment like this:</br>
+                            <code-along src='/js/snippets/01.introduction/002.js' js-tutor></code-along>
+                            <pre data-src='/js/snippets/01.introduction/002.js'></pre>
+                        </ul>
+                    </article>
+                    <!--copy until here to create subsection-->
+                </div>
+                <!--copy until here to create section-->
+            </article>
+        </div>
+    </section>
+
+
+    <!-------------------- Don't change anything down -------------------->
+
+    <!-------------------- FOOTER -------------------->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="row center-xs center-sm center-md center-lg">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-github"></i>
+                    <i class="fa fa-map-marker"></i>
+                    <i class="fa fa-envelope-o"></i></div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src="js/JQuery3.3.1.js"></script>
+    <script type="text/javascript">
+        /*Responsive Navigation*/
+        $(document).ready(function() {
+            $('.toggle').click(function() {
+                $('.toggle').toggleClass('active')
+
+                $('nav ul').toggleClass('active-menu')
+
+
+            })
+        });
+    </script>
+</body>
+
+</html>
