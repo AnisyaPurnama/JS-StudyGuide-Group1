@@ -6,7 +6,7 @@ Build accessible javaScript website tutorial. This project is made for learning 
 [Development Strategy](https://github.com/AnisyaPurnama/JS-StudyGuide-Group1/blob/master/planning/development-strategy.md)
 
 ### Team Member (GROUP 1)
-- [Arphine](https://github.com/Ina-arpine)
+- [Arpine](https://github.com/Ina-arpine)
 - [Mahmoud Abu](https://github.com/krakla)
 - [Anisya](https://github.com/AnisyaPurnama)
 - [Emely](https://github.com/emelysalmeron)
