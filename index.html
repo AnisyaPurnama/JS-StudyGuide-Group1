@@ -5,10 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Study Guide</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/flexboxgrid.css">
-    <!--using FontAwesome---------------->
+    <!--using js scripts---------------->
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src='./lib/prettier/standalone.js'></script>
+    <script src='./lib/prettier/parser-babel.js'></script>
+    <script>
+        var require = {
+            paths: {
+                'vs': './lib/monaco/min/vs'
+            }
+        };
+    </script>
+    <script src="./lib/monaco/min/vs/loader.js"></script>
+    <script src="./lib/monaco/min/vs/editor/editor.main.nls.js"></script>
+    <script src="./lib/monaco/min/vs/editor/editor.main.js"></script>
+
+    <script src='./lib/wc-code-along.js'></script>
+
+
+    <!--using css---------------->
+    <style>
+        .snippet {
+            font-size: 70%;
+        }
+    </style>
+
+    <link rel="stylesheet" data-name="vs/editor/editor.main" href="./lib/monaco/min/vs/editor/editor.main.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/flexboxgrid.css">
+
+    <!-- you will need these styles and scripts to use prism snippets -->
+    <script src='./lib/prism/prism.js'></script>
+    <script src='./lib/prism/toolbar-buttons.js'></script>
+    <link rel="stylesheet" href="./lib/prism/prism.css">
+
 </head>
 
 <body>

@@ -7,25 +7,38 @@
     <title>JavaScript Study Guide: Functions</title>
     <!--using js scripts---------------->
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-    <script src='/js/lib/prettier/standalone.js'></script>
-    <script src='/js/lib/prettier/parser-babel.js'></script>
+    <script src='./lib/prettier/standalone.js'></script>
+    <script src='./lib/prettier/parser-babel.js'></script>
     <script>
         var require = {
             paths: {
-                'vs': '/js/lib/monaco/min/vs'
+                'vs': './lib/monaco/min/vs'
             }
         };
     </script>
-    <script src="/js/lib/monaco/min/vs/loader.js"></script>
-    <script src="/js/lib/monaco/min/vs/editor/editor.main.nls.js"></script>
-    <script src="/js/lib/monaco/min/vs/editor/editor.main.js"></script>
-    <script src='/js/lib/wc-code-along.js'></script>
-    <script src='/js/lib/prism/prism.js'></script>
+    <script src="./lib/monaco/min/vs/loader.js"></script>
+    <script src="./lib/monaco/min/vs/editor/editor.main.nls.js"></script>
+    <script src="./lib/monaco/min/vs/editor/editor.main.js"></script>
+
+    <script src='./lib/wc-code-along.js'></script>
+
+
     <!--using css---------------->
-    <link rel="stylesheet" data-name="vs/editor/editor.main" href="/js/lib/monaco/min/vs/editor/editor.main.css">
-    <link rel="stylesheet" href="/js/lib/prism/prism.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/flexboxgrid.css">
+    <style>
+        .snippet {
+            font-size: 70%;
+        }
+    </style>
+
+    <link rel="stylesheet" data-name="vs/editor/editor.main" href="./lib/monaco/min/vs/editor/editor.main.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/flexboxgrid.css">
+
+    <!-- you will need these styles and scripts to use prism snippets -->
+    <script src='./lib/prism/prism.js'></script>
+    <script src='./lib/prism/toolbar-buttons.js'></script>
+    <link rel="stylesheet" href="./lib/prism/prism.css">
+
 </head>
 
 <body class="line-numbers">
@@ -96,12 +109,11 @@
 
                             <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
 
-                            <code-along src='/js/snippets/01.introduction/001.js' js-tutor></code-along>
-                            <pre data-src='/js/snippets/01.introduction/001.js'></pre>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/00-01.js' eval js-tutor></pre>
                             <br> Here, <code>// printing name on the console</code> is a comment.</br>
                             <br> You can also use single like comment like this:</br>
-                            <code-along src='/js/snippets/01.introduction/002.js' js-tutor></code-along>
-                            <pre data-src='/js/snippets/01.introduction/002.js'></pre>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/00-02.js' eval js-tutor></pre>
+
                         </ul>
                     </article>
                     <!--copy until here to create subsection-->
