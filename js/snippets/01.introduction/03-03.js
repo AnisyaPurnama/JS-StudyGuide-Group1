@@ -1,0 +1,1 @@
+const number = 3 + 5; // 8
