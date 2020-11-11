@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Study Guide: Introduction</title>
+    <!--using js scripts---------------->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src='./lib/prettier/standalone.js'></script>
+    <script src='./lib/prettier/parser-babel.js'></script>
+    <script>
+        var require = {
+            paths: {
+                'vs': './lib/monaco/min/vs'
+            }
+        };
+    </script>
+    <script src="./lib/monaco/min/vs/loader.js"></script>
+    <script src="./lib/monaco/min/vs/editor/editor.main.nls.js"></script>
+    <script src="./lib/monaco/min/vs/editor/editor.main.js"></script>
+
+    <script src='./lib/wc-code-along.js'></script>
+
+
+    <!--using css---------------->
+    <style>
+        .snippet {
+            font-size: 70%;
+        }
+    </style>
+
+    <link rel="stylesheet" data-name="vs/editor/editor.main" href="./lib/monaco/min/vs/editor/editor.main.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/flexboxgrid.css">
+
+    <!-- you will need these styles and scripts to use prism snippets -->
+    <script src='./lib/prism/prism.js'></script>
+    <script src='./lib/prism/toolbar-buttons.js'></script>
+    <link rel="stylesheet" href="./lib/prism/prism.css">
+
+</head>
+
+<body class="line-numbers">
+    <!-------------------- HEADER -------------------->
+    <header>
+        <nav id="main-header">
+            <!--Logo--->
+            <a href="index.html" class="logo">
+                <spin class="js">js;</spin>Study Giude</a>
+            <!-------------------- navbar Sections --------------------------->
+            <div class="toggle"></div>
+            <ul class="nbsec">
+                <li class="current"><a href="introduction.html">Introduction</a></li>
+                <li><a href="control-flow.html">Control Flow</a></li>
+                <li><a href="functions.html">Functions</a></li>
+                <li><a href="objects.html">Objects</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-------------------- Main Part -------------------->
+    <section class="code-part main">
+        <div class="container">
+            <aside class="sidebar">
+                <div class="code-block">
+                    <h2 class="page-title">Introduction</h2>
+                    <ul>
+                        <li><a href="#jsComments"><i class="far fa-code"></i> JS Comments</a></li>
+                        <li><a href="#jsVariables"><i class="far fa-code"></i> JS Variables</a></li>
+                        <li><a href="#jsDataType"><i class="far fa-code"></i> JS Data Types</a></li>
+                        <li><a href="#jsOperators"><i class="far fa-code"></i> JS Operators</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-------------------- You can start working (copy and paste) and changing the subtitles from here -------------------->
+
+            <article class="main-col">
+                <!--To create new section copy from this line to the line I mention down-->
+                <div class="code-block">
+                    <h1 class="page-title">
+                        <!--Here paste the href you copy from above in place of ___ in id="___ "-->
+                        <!--Also here  you should write the subtitle in the section in white color if you use vsc-->
+                        <span id="jsComments">JavaScript Comments</span>
+                    </h1>
+                    <!--This is the main statment -->
+                    <p class="hline ">
+                        JavaScript comments are hints that a programmer can add to make their code easier to read and understand. They are completely ignored by JavaScript engines.
+                    </p>
+                    <article class="code-article hline ">
+                        There are two ways to add comments to code:
+                        <ul>
+                            <li><code>//</code> - Single Line Comments</li>
+                            <li><code>/* */</code> -Multi-line Comments</li>
+                        </ul>
+                    </article>
+                    <!--To create new subsection copy from this line to the line I mention down-->
+                    <article class="code-article hline ">
+                        <!--Here the sub-subtitle in the section between h4-->
+
+                        <h4>Single Line Comments</h4>
+                        In JavaScript, any line that starts with <code>//</code> is a comment. For example,
+                        <ul>
+
+                            <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/00-01.js' eval js-tutor></pre>
+
+                            <br> Here, <code>// printing name on the console</code> is a comment.</br>
+                            <br> You can also use single like comment like this:</br>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/00-02.js' eval js-tutor></pre>
+
+                        </ul>
+                    </article>
+                    <!--copy until here to create subsection-->
+
+                    <article class="code-article hline ">
+                        <h4>Multi-line Comments</h4>
+                        In Javascript, any text between <code>/*</code> and <code> */</code> is also a comment. For example,
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/00-03.js' eval js-tutor></pre>
+                            <br> Since the rest of the source code will be used to implement the rules of the game, the comment above is a good example where you might use a multi-line comment.</br>
+                        </ul>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>Using Comments for Debugging</h4>
+                        Comments can also be used to disable code to prevent it from being executed. For example,
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/00-04.js' eval js-tutor></pre>
+                            <br> If you get an error while running the program, instead of removing the error-prone code, you can use comments to disable it from being executed; this can be a valuable debugging tool.</br>
+                            <br> You can also use single like comment like this:</br>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/00-05.js' eval js-tutor></pre>
+                            <blockquote>
+                                <span class="mark">Pro Tip:</span> Remember the shortcut for using comments; it can be really helpful. For most code editors, it's
+                                <code>Ctrl + /</code> for Windows and <code>Cmd + /</code> for Mac.</blockquote>
+                        </ul>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>Make Code Easier to Understand</h4>
+                        <ul>
+                            <li>As a JavaScript developer, you will not only write code but also may have to modify code written by other developers.</li>
+                            <li>If you write comments on your code, it will be easier for you to understand the code in the future. Also, it will be easier for your fellow developers to understand the code.</li>
+                            <li>As a general rule of thumb, use comments to explain <span class="mark ">why</span> you did something rather than <span class="mark ">how</span> you did something, and you are good.</li>
+                            <blockquote>
+                                <span class="mark">Note:</span> Comments shouldn't be the substitute for a way to explain poorly written code in English. You should always write well-structured and self-explanatory code. And, then use comments.</blockquote>
+                        </ul>
+                    </article>
+                </div>
+                <!--copy until here to create section-->
+
+                <div class="code-block">
+                    <h1 class="page-title">
+                        <span id="jsVariables">JavaScript Variables</span>
+                    </h1>
+                    <p class="hline ">
+                        In programming, a variable is a container (storage area) to hold data.
+                    </p>
+                    <article class="code-article hline ">
+                        <h4>JavaScript Declare Variables</h4>
+                        In JavaScript, we use the following keywords to declare variables: <code>var</code> and <code>let</code>. For example,
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/01-01.js' eval js-tutor></pre>
+                            <br> Here, <code>x</code> and <code>y</code> are variables</br>
+                        </ul>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript var Vs let</h4>
+                        Both <code>var</code> and <code>let</code> are used to declare variables. However, there are some differences between them.
+                        <ul>
+                            <table>
+                                <tr>
+                                    <th>var</th>
+                                    <th>let</th>
+                                </tr>
+                                <tr>
+                                    <td><code>var</code> is used in the older versions of JavaScript</td>
+                                    <td><code>let</code> is the new way of declaring variables starting <span class="mark">ES6 (ES2015)</span>.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>var</code> is function scoped (will be discussed in the later tutorials).</td>
+                                    <td><code>let</code> is block scoped (will be discussed in the later tutorials).</td>
+                                </tr>
+                                <tr>
+                                    <td>For example, <code>var x;</code></td>
+                                    <td>For example, <code>let y;</code></td>
+                                </tr>
+                            </table>
+                        </ul>
+                        <blockquote>Note: It is recommended to use <code>let</code> instead of <code>var</code>. However, there are a few browsers that do not support <code>let</code>. Visit <a href="https://caniuse.com/#feat=let"><span class="mark">JavaScript let browser support</span></a>                            to learn more
+                        </blockquote>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript Initialize Variables</h4>
+                        We use the assignment operator <code>=</code> to assign a value to a variable.
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/01-02.js' eval js-tutor></pre>
+                            <li>Here, <span class="mark">5</span> is assigned to variable <code>x</code>.</li>
+                            <li>You can also initialize variables during its declaration.</li>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/01-03.js' eval js-tutor></pre>
+                            <li>In JavaScript, it's possible to declare variables in a single statement.</li>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/01-04.js' eval js-tutor></pre>
+                        </ul>
+                    </article>
+
+                    <article class="code-article hline ">
+                        If you use a variable without initializing it, it will have an <code>undefined</code> value.
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/01-05.js' eval js-tutor></pre>
+                            <li>Here <code>x</code> is the variable name and since it does not contain any value, it will be undefined.</li>
+                            <li>You will learn about <code>undefined</code> and other data types in the next tutorial in detail.</li>
+                        </ul>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>Change the Value of Variables</h4>
+                        It's possible to change the value stored in the variable. For example,
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/01-06.js' eval js-tutor></pre>
+                            <li>The value of a variable may <span class="mark">vary</span>. Hence, the name <span class="mark">variable</span>.</li>
+                        </ul>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>Rules for Naming JavaScript Variables</h4>
+                        The rules for naming variables are:
+                        <ul>
+                            <li>1. Variable names must start with either a letter, an underscore <code>_</code>, or the dollar sign <code>$</code>. For example,</li>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/01-07.js' eval js-tutor></pre>
+                            <li>2. Variable names cannot start with numbers. For example,</li>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/01-08.js' eval js-tutor></pre>
+                            <li>3. JavaScript is case-sensitive. So y and Y are different variables. For example,</li>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/01-09.js' eval js-tutor></pre>
+                            <li>4. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords"><span class="mark">Keywords</span></a> cannot be used as variable names. For example,</li>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/01-10.js' eval js-tutor></pre>
+                        </ul>
+                        <blockquote><span class='mark'>Notes:</span>
+                            <ul>
+                                <li>Notes: Though you can name variables in any way you want, it's a good practice to give a descriptive variable name. If you are using a variable to store the number of apples, it better to use <code>apples</code> or <code>numberOfApples</code>                                    rather than <code>x</code> or <code>n</code>.</li>
+                                <li>In JavaScript, the variable names are generally written in camelCase if it has multiple words. For example, <code>firstName</code>, <code>annualSalary</code>, etc.</li>
+                            </ul>
+                        </blockquote>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript Constants</h4>
+                        <ul>
+                            <li> The <code>const</code> keyword was also introduced in the <span class='mark'>ES6(ES2015)</span> version to create constants. For example,
+                            </li>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/01-11.js' eval js-tutor></pre>
+                            <li>Once a constant is initialized, we cannot change its value.</li>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/01-12.js' eval js-tutor></pre>
+                            <li>Simply, a constant is a type of variable whose value cannot be changed.</li>
+                            <li>Also, you cannot declare a constant without initiating it. For example,</li>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/01-13.js' eval js-tutor></pre>
+                        </ul>
+                        <blockquote><span class='mark'>Notes:</span> If you are sure that the value of a variable won't change throughout the program, it's recommended to use const. However, there are a few browsers that do not support const. Visit
+                            <a href="https://caniuse.com/#feat=const"><span class="mark">JavaScript const browser support</span></a> to learn more
+                        </blockquote>
+                    </article>
+                </div>
+
+                <div class="code-block">
+                    <h1 class="page-title">
+                        <span id="jsDataType">JavaScript Data Types</span>
+                    </h1>
+                    <p class="hline ">
+                        As suggested by the name <span class="mark">data types</span>, it refers to types of data that you can use in your program. For example,
+                    </p>
+
+                    <article class="code-article hline ">
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/02-01.js' eval js-tutor></pre>
+                        </ul>
+                        <br> Here,
+                        <li><code>5</code> is an integer data.</li>
+                        <li><code>"Hello"</code> is a string data.</li>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript Data Types</h4>
+                        There are eight basic data types in JavaScript. They are:
+                        <div class="row center-xs center-sm center-md center-lg">
+                            <table>
+                                <tr>
+                                    <td><span class='mark'>Data Types</span></td>
+                                    <td><span class='mark'>Description</span></td>
+                                    <td><span class='mark'>Example</span></td>
+                                </tr>
+                                <tr>
+                                    <td><code>String</code></td>
+                                    <td>represents textual data</td>
+                                    <td><code>'hello'</code>, <code>"hello world"</code> etc</td>
+                                </tr>
+                                <tr>
+                                    <td><code>Number</code></td>
+                                    <td>an integer or a floating-point number</td>
+                                    <td><code>3</code>, <code>3.45</code>, <code>3e-2</code> etc</td>
+                                </tr>
+                                <tr>
+                                    <td><code>BigInt</code></td>
+                                    <td>an integer with arbitrary precision</td>
+                                    <td><code>900719925124740999n</code>, <code>1n</code>, etc</td>
+                                </tr>
+                                <tr>
+                                    <td><code>Boolean</code></td>
+                                    <td>Any of two values: true or false</td>
+                                    <td><code>true</code> and <code>false</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>undefined</code></td>
+                                    <td>a data type whose variable is not initialized</td>
+                                    <td><code>let a;</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>null</code></td>
+                                    <td>special keyword denoting a <code>null</code> value</td>
+                                    <td><code>let a = null;</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>Symbol</code></td>
+                                    <td>data type whose instances are unique and immutable</td>
+                                    <td><code>let value = Symbol('hello');</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>Object</code></td>
+                                    <td>key-value pairs of collection of data</td>
+                                    <td><code>let student = { };</code></td>
+                                </tr>
+                            </table>
+                        </div>
+                        Here, all data types except <code>Object</code> are primitive data types, whereas <code>Object</code> is non-primitive.
+                        <blockquote>Note: The <code>Object</code> data type (non-primitive type) can store collections of data, whereas primitive data type can only store a single data.</blockquote>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript String</h4>
+                        <code>String</code> is used to store text. In JavaScript, strings are surrounded by quotes:
+                        <li>Single quotes: <code>'Hello'</code> </li>
+                        <li>Double quotes: <code>"Hello"</code> </li>
+                        <li>Backticks: <code>`Hello`</code> </li>
+                        For example,
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/02-02.js' eval js-tutor></pre>
+                            <li>Single quotes and double quotes are practically the same and you can use either of them.</li>
+                            <li>Backticks are generally used when you need to include variables or expressions into a string. This is done by wrapping variables or expressions with <code>${variable or expression}</code> as shown above.</li>
+                            <li>You will learn about the use of backticks in the JavaScript String tutorial.</li>
+                        </ul>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript Number</h4>
+                        <code>Number</code> represents integer and floating numbers (decimals and exponentials). For example,
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/02-03.js' eval js-tutor></pre>
+                            <li>A number type can also be <code>+Infinity</code>, <code>+Infinity</code>, and <code>NaN</code> (not a number). For example,</li>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/02-04.js' eval js-tutor></pre>
+                        </ul>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript BigInt</h4>
+                        In JavaScript, <code>Number</code> type can only represent numbers less than <span class='mark'>(2<sup>53</sup>- 1)</span> and more than <span class='mark'>-(2<sup>53</sup>- 1)</span>. However, if you need to use a larger number
+                        than that, you can use the <code>BigInt</code> data t ype.
+                        <br> <br> A <code>BigInt</code> number is created by appending <span class='mark'>n</span> to the end of an integer. For example,
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/02-05.js' eval js-tutor></pre>
+                            <span class="mark">Output</span>
+                            <div class='output'>
+                                <p>
+                                    900719925124740999n
+                                    <br>Uncaught TypeError: Cannot mix BigInt and other types
+                                </p>
+                            </div>
+                        </ul>
+                        <blockquote><span class='mark'>Notes:</span>
+                            <ul>
+                                <li>Note: <code>BigInt</code> was introduced in the newer version of JavaScript and is not supported by many browsers including Safari. Visit <a href="https://caniuse.com/#feat=bigint"><span class="mark">JavaScript BigInt support</span></a>                                    to learn more.
+                            </ul>
+                        </blockquote>
+
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript Boolean</h4>
+                        This data type represents the logical entity. <code>Boolean</code> represents one of two values: <code>true</code> or <code>false</code>. It is easier to think of it as a yes/no switch. For example,
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/02-06.js' eval js-tutor></pre>
+                            <li>You will learn more about booleans in the <a href="/control-flow.html"><span class="mark">JavaScript Comparison and Logical Operators</span></a> tutorial.</li>
+                        </ul>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript undefined</h4>
+                        The <code>undefined</code> data type represents <span class="mark">value is not assigned</span> . If a variable is declared but the value is not assigned, then the value of that variable will be <code>undefined</code> . For example,
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/02-07.js' eval js-tutor></pre>
+                            <li>It is also possible to explicitly assign a variable value <code>undefined</code>. For example,</li>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/02-08.js' eval js-tutor></pre>
+                        </ul>
+                        <blockquote><span class='mark'>Note:</span> It is recommended not to explicitly assign <code>undefined</code> to a variable. Usually, <code>null</code> is used to assign 'unknown' or 'empty' value to a variable.
+                        </blockquote>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript null</h4>
+                        In JavaScript, <code>null</code> is a special value that represents <span class="mark">empty</span> or <span class="mark">unknown value</span>. For example,
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/02-09.js' eval js-tutor></pre>
+                            <li>The code above suggests that the <code>number</code> variable is empty.</li>
+                        </ul>
+                        <blockquote><span class='mark'>Note:</span> <code>null</code> is not the same as NULL or Null.
+                        </blockquote>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript Symbol</h4>
+                        This data type was introduced in a newer version of JavaScript (from ES2015).
+                        <br><br> A value having the data type <code>Symbol</code> can be referred to as a <span class="mark">symbol value</span>. <code>Symbol</code> is an immutable primitive value that is unique. For example,
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/02-10.js' eval js-tutor></pre>
+                            <li>Though <code>value1</code> and <code>value2</code> both contain <code>'hello'</code>, they are different as they are of the <code>Symbol</code> type.</li>
+                            <li>Visit <a href="/objects.html"><span class="mark">JavaScript Symbol</span></a> to learn more</li>
+                        </ul>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript objects</h4>
+                        An <code>object</code> is a complex data type that allows us to store collections of data. For example,
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/02-11.js' eval js-tutor></pre>
+                            <li>You will learn about <a href="/objects.html"><span class="mark">JavaScript Objects</span></a> in the later tutorial./li>
+                        </ul>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript Type</h4>
+                        JavaScript is a dynamically typed (loosely typed) language. JavaScript automatically determines the variables' data type for you.
+                        <br><br>It also means that a variable can be of one data type and later it can be changed to another data type. For example,
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/02-12.js' eval js-tutor></pre>
+                        </ul>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript typeof</h4>
+                        To find the type of a variable, you can use the <code>typeof</code> operator. For example,
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/02-13.js' eval js-tutor></pre>
+                        </ul>
+                        <blockquote>Notice that typeof returned <code>"object"</code> for the <code>null</code> type. This is a known issue in JavaScript since its first release.</blockquote>
+                    </article>
+                </div>
+
+                <div class="code-block">
+                    <h1 class="page-title">
+                        <span id="jsOperators">JavaScript Operators</span>
+                    </h1>
+                    <article class="code-article hline ">
+                        <h4>JavaScript Operators</h4>
+                        In JavaScript, an operator is a special symbol used to perform operations on operands (values and variables). For example,
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/03-01.js' eval js-tutor></pre>
+                            <li>Here <code>+</code> is an operator that performs addition, and <code>2</code> and <code>3</code> are operands.</li>
+                        </ul>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript Operator Types</h4>
+                        Here is a list of different operators you will learn in this tutorial.
+                        <li>Assignment Operators</li>
+                        <li>Arithmetic Operators</li>
+                        <li>Comparison Operators</li>
+                        <li>Logical Operators</li>
+                        <li>Bitwise Operators</li>
+                        <li>String Operators</li>
+                        <li>Other Operators</li>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript Assignment Operators</h4>
+                        Assignment operators are used to <span class="mark">assign</span> values to variables. For example,
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/03-02.js' eval js-tutor></pre>
+                            <li>Here, the <code>=</code> operator is used to assign value <code>5</code> to variable x.</li>
+                            <li>Here's a list of commonly used assignment operators:</li>
+                        </ul>
+                        <div class="row center-xs center-sm center-md center-lg">
+                            <table>
+                                <tr>
+                                    <td><span class='mark'>Operator</span></td>
+                                    <td><span class='mark'>Name</span></td>
+                                    <td><span class='mark'>Example</span></td>
+                                </tr>
+                                <tr>
+                                    <td><code>=</code></td>
+                                    <td>Assignment operator</td>
+                                    <td><code>a=7; // 7</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>+=</code></td>
+                                    <td>Addition assignment</td>
+                                    <td><code>a += 5; // a = a + 5</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>-=</code></td>
+                                    <td>Subtraction Assignment</td>
+                                    <td><code>a -= 2; // a = a - 2</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>*=</code></td>
+                                    <td>Multiplication Assignment</td>
+                                    <td><code>a *= 3; // a = a * 3</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>/=</code></td>
+                                    <td>Division Assignment</td>
+                                    <td><code>a /= 2; // a = a / 5</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>%=</code></td>
+                                    <td>Remainder Assignment</td>
+                                    <td><code>a %= 2; // a = a % 2</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>**=</code></td>
+                                    <td>Exponentiation Assignment</td>
+                                    <td><code>a **= 2; // a = a^2</code></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <blockquote><span class="mark">Note:</span> The commonly used assignment operator is <code>=</code>. You will understand other assignment operators such as <code>+=</code>, <code>-=</code>, <code>*=</code> etc. once we learn arithmetic operators.
+                        </blockquote>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript Arithmetic Operators</h4>
+                        Arithmetic operators are used to perform <span class="mark">arithmetic calculations</span>. For example,
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/03-03.js' eval js-tutor></pre>
+                            <li>Here, the <code>+</code> operator is used to add two operands.</li>
+                        </ul>
+                        <div class="row center-xs center-sm center-md center-lg">
+                            <table>
+                                <tr>
+                                    <td><span class='mark'>Operator</span></td>
+                                    <td><span class='mark'>Name</span></td>
+                                    <td><span class='mark'>Example</span></td>
+                                </tr>
+                                <tr>
+                                    <td><code>+</code></td>
+                                    <td>Addition</td>
+                                    <td><code>x + y</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>-</code></td>
+                                    <td>Subtraction</td>
+                                    <td><code>x - y</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>*</code></td>
+                                    <td>Multiplication</td>
+                                    <td><code>x * y</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>/</code></td>
+                                    <td>Division</td>
+                                    <td><code>x / y</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>%</code></td>
+                                    <td>Remainder</td>
+                                    <td><code>x % y</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>++</code></td>
+                                    <td>Increment (increments by 1)</td>
+                                    <td><code>++x</code> or <code>x++</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>++</code></td>
+                                    <td>Decrement (decrements by 1)</td>
+                                    <td><code>--x</code> or <code>x--</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>++</code></td>
+                                    <td>Exponentiation (Power)</td>
+                                    <td><code>x ** y</code></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <br>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>Example 1: Arithmetic operators in JavaScript</h4>
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/03-04.js' eval js-tutor></pre>
+                            <span class="mark">Output</span>
+                            <div class='output'>
+                                <p>
+                                    x + y == 8
+                                    <br> x - y == 2
+                                    <br> x * y == 15
+                                    <br> x / y == 1.6666666666666667
+                                    <br> x % y == 2
+                                    <br>++x == 6
+                                    <br> x++ == 7
+                                    <br> --x == 6
+                                    <br> x-- ==6
+                                    <br> x = 5
+                                </p>
+                            </div>
+                        </ul>
+                        <blockquote><span class="mark">Note</span>The <code>**</code> operator was introduced in EcmaScript 2016. And, some browsers may not support the exponentiation operator. To learn more, visit
+                            <a href="https://caniuse.com/#search=Exponentiation%20operator"><span class="mark">JavaScript exponentiation browser support</span></a>.</blockquote>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript Comparison Operators</h4>
+                        Comparison operators compare two values and return a boolean value, either <code>true</code> or <code>false</code>. For example,
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/03-05.js' eval js-tutor></pre>
+                            <li>Here, the comparison operator <code>></code> is used to compare whether <code>a</code> is greater than <code>b</code>. </li>
+                        </ul>
+                        <div class="row center-xs center-sm center-md center-lg">
+                            <table>
+                                <tr>
+                                    <td><span class='mark'>Operator</span></td>
+                                    <td><span class='mark'>Description</span></td>
+                                    <td><span class='mark'>Example</span></td>
+                                </tr>
+                                <tr>
+                                    <td><code>==</code></td>
+                                    <td><span class='mark'>Equal to</span>: returns <code>true</code> if the operands are equal</td>
+                                    <td><code>x == y</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>!=</code></td>
+                                    <td><span class='mark'>Not equal to</span>: returns <code>true</code> if the operands are not equal</td>
+                                    <td><code>x != y</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>===</code></td>
+                                    <td><span class='mark'>Strict equal to</span>: <code>true</code> if the operands are equal and of the same type</td>
+                                    <td><code>x === y</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>!==</code></td>
+                                    <td><span class='mark'>Strict not equal to</span>: <code>true</code> if the operands are equal but of different type or not equal at all</td>
+                                    <td><code>x !== y</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>></code></td>
+                                    <td><span class='mark'>Greater than</span>: <code>true</code> if left operand is greater than the right operand</td>
+                                    <td><code>x > y</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>>=</code></td>
+                                    <td><span class='mark'>Greater than or equal to</span>: <code>true</code> if left operand is greater than or equal to the right operand</td>
+                                    <td><code>x >= y</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code><</code></td>
+                                    <td><span class='mark'>Less than</span>: <code>true</code> if the left operand is less than the right operand</td>
+                                    <td><code>x <> y</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code><=</code></td>
+                                    <td><span class='mark'>Less than or equal to</span>: <code>true</code> if the left operand is less than or equal to the right operand</td>
+                                    <td><code>x <= y</code></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>Example 2: Comparison operators in JavaScript</h4>
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/02-06.js' eval js-tutor></pre>
+                            <span class="mark">Output</span>
+                            <div class='output'>
+                                <p>
+                                    true
+                                    <br> true
+                                    <br> true
+                                    <br> true
+                                    <br> true
+                                    <br> false
+                                    <br> false
+                                    <br> true
+                                </p>
+                            </div>
+                            <li>Comparison operators are used in decision making and loops. You will learn about the use of comparison operators in detail in the later tutorials.</li>
+                        </ul>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript Logical Operators</h4>
+                        Logical operators perform logical operations and return a boolean value, either <code>undefined</code> or <code>false</code>. For example,
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/03-07.js' eval js-tutor></pre>
+                            <li>Here, <code>&&</code> is a logical operator <span class='mark'>AND</span>. Since both <code> x < 6 </code> and
+                                <code> y < 5 </code> are <code>true</code>, the result is <code>true</code>.</li>
+                        </ul>
+                        <div class="row center-xs center-sm center-md center-lg">
+                            <table>
+                                <tr>
+                                    <td><span class='mark'>Operator</span></td>
+                                    <td><span class='mark'>Description</span></td>
+                                    <td><span class='mark'>Example</span></td>
+                                </tr>
+                                <tr>
+                                    <td><code>&&</code></td>
+                                    <td><span class='mark'>Logical AND</span>: true if both the operands are true, else returns false</td>
+                                    <td><code>x && y</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>||</code></td>
+                                    <td><span class='mark'>Logical OR</span>: true if either of the operands is true; returns false if both are false</td>
+                                    <td><code>x || y</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>!</code></td>
+                                    <td><span class='mark'>Logical NOT</span>: true if the operand is false and vice-versa.</td>
+                                    <td><code>!x</code></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>Example 3: Logical Operators in JavaScript</h4>
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/03-08.js' eval js-tutor></pre>
+                            <span class="mark">Output</span>
+                            <div class='output'>
+                                <p>
+                                    true
+                                    <br> false
+                                    <br> true
+                                    <br> false
+                                </p>
+                            </div>
+                            <li>Logical operators are used in decision making and loops. You will learn about the use of logical operators in detail in the later tutorials.</li>
+                        </ul>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript Bitwise Operators</h4>
+                        Bitwise operators perform operations on binary representations of numbers.
+                        <div class="row center-xs center-sm center-md center-lg">
+                            <table>
+                                <tr>
+                                    <td><span class='mark'>Operator</span></td>
+                                    <td><span class='mark'>Description</span></td>
+                                </tr>
+                                <tr>
+                                    <td><code>&</code></td>
+                                    <td>Bitwise AND</td>
+                                </tr>
+                                <tr>
+                                    <td><code>|</code></td>
+                                    <td>Bitwise OR</td>
+                                </tr>
+                                <tr>
+                                    <td><code>^</code></td>
+                                    <td>Bitwise XOR</td>
+                                </tr>
+                                <tr>
+                                    <td><code> ~ </code></td>
+                                    <td>Bitwise NOT</td>
+                                </tr>
+                                <tr>
+                                    <td><code>  <<  </code></td>
+                                    <td>Left shift</td>
+                                </tr>
+                                <tr>
+                                    <td><code>  >> </code></td>
+                                    <td>Sign-propagating right shift</td>
+                                </tr>
+                                <tr>
+                                    <td><code>   >>>  </code></td>
+                                    <td>Zero-fill right shift</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <ul>
+                            <li>Bitwise operators are rarely used in everyday programming.</li>
+                        </ul>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>JavaScript String Operators</h4>
+                        In JavaScript, you can also use the <code>+</code> operator to concatenate (join) two or more strings.
+                        <h4>Example 4: String operators in JavaScript</h4>
+                        <ul>
+                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/03-09.js' eval js-tutor></pre>
+                        </ul>
+                        <span class="mark">Output</span>
+                        <div class='output'>
+                            <p>
+                                helloworld
+                                <br> JavaScript tutorial
+                            </p>
+                        </div>
+                        <blockquote> <span class="mark">Note:</span> When <code>+</code> is used with strings, it performs concatenation. However, when <code>+</code> is used with numbers, it performs addition.</blockquote>
+                    </article>
+
+                    <article class="code-article hline ">
+                        <h4>Other JavaScript Operators</h4>
+                        For the sake of completeness, here's a list of other operators available in JavaScript. You will learn about these operators in the later tutorials
+                        <div class="row center-xs center-sm center-md center-lg">
+                            <table>
+                                <tr>
+                                    <td><span class='mark'>Operator</span></td>
+                                    <td><span class='mark'>Description</span></td>
+                                    <td><span class='mark'>Example</span></td>
+                                </tr>
+                                <tr>
+                                    <td><code>,</code></td>
+                                    <td>evaluates multiple operands and returns the value of the last operand.</td>
+                                    <td><code>let a = (1, 3 , 4); // 4</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>?:</code></td>
+                                    <td>returns value based on the condition</td>
+                                    <td><code>(5 > 3) ? 'success' : 'error'; // "success"</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>delete</code></td>
+                                    <td>deletes an object's property, or an element of an array</td>
+                                    <td><code>delete x</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>typeof</code></td>
+                                    <td>returns a string indicating the data type</td>
+                                    <td><code>typeof 3; // "number"</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>void</code></td>
+                                    <td>discards the expression's return value</td>
+                                    <td><code>void (x)</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>in</code></td>
+                                    <td>returns <code>true</code> if the specified property is in the object</td>
+                                    <td><code>prop in object</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>instanceof</code></td>
+                                    <td>returns <code>true</code> if the specified object is of of the specified object type</td>
+                                    <td><code>object instanceof object_type</code></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </article>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <!-------------------- FOOTER -------------------->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="row center-xs center-sm center-md center-lg">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-github"></i>
+                    <i class="fa fa-map-marker"></i>
+                    <i class="fa fa-envelope-o"></i></div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src="js/JQuery3.3.1.js"></script>
+    <script type="text/javascript">
+        /*Responsive Navigation*/
+        $(document).ready(function() {
+            $('.toggle').click(function() {
+                $('.toggle').toggleClass('active')
+
+                $('nav ul').toggleClass('active-menu')
+
+
+            })
+        });
+    </script>
+</body>
+
+</html>
