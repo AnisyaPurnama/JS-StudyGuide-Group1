@@ -72,11 +72,11 @@
                         <li><a href="#consfun"><i class="far fa-code"></i> JS Constructor Function</a></li>
                         <li><a href="#proto"><i class="far fa-code"></i> JS Prototype</a></li>
                         <li><a href="#getset"><i class="far fa-code"></i> JS Getters and Setters</a></li>
-                        <li><a href="#forinloop"><i class="far fa-code"></i> JS for...in Loop</a></li>
+                        <!-- <li><a href="#forinloop"><i class="far fa-code"></i> JS for...in Loop</a></li>
                         <li><a href="#jsnumber"><i class="far fa-code"></i> JS Number</a></li>
                         <li><a href="#jsstring"><i class="far fa-code"></i> JS String</a></li>
                         <li><a href="#jsarray"><i class="far fa-code"></i> JS Array</a></li>
-                        <li><a href="#jssymol"><i class="far fa-code"></i> JS Symbol</a></li>
+                        <li><a href="#jssymol"><i class="far fa-code"></i> JS Symbol</a></li>-->
                     </ul>
                 </div>
             </aside>
@@ -84,50 +84,572 @@
 
             <!-------------------- You can start working (copy and paste) and changing the subtitles from here -------------------->
 
-            <article class="main-col">
-                <!-------------------- New section -------------------->
-                <!--To create new section copy from this line to the line I mention down-->
-                <div class="code-block">
-                    <h1 class="page-title">
-                        <!--Here paste the href you copy from above in place of ___ in id="___"-->
-                        <!--Also here  you should write the subtitle in the section in white color if you use vsc-->
-                        <span id="jsComments">subsection title</span>
-                    </h1>
-                    <!--This is the main statment -->
-                    <p class="hline">
-                        main statement
-                    </p>
-                    <article class="code-article hline">
-                        There are two ways to add comments to code:
-                        <ul>
-                            <li><code>//</code> - Single Line Comments</li>
-                        </ul>
-                    </article>
+<!-------------------- You can start working (copy and paste) and changing the subtitles from here -------------------->
+​
+<article class="main-col">
+<!-------------------- New section -------------------->
+    <!--To create new section copy from this line to the line I mention down-->
+    <div class="code-block">
+        <h1 class="page-title">
+            <!--Here paste the href you copy from above in place of ___ in id="___ "-->
+            <!--Also here  you should write the subtitle in the section in white color if you use vsc-->
+            <span id="jsobj">JavaScript Objects</span>
+        </h1>
+        <!--This is the main statement -->
+        <p class="hline ">
+            In the JavaScript data types tutorial, you learned about 7 different primitive data types. And here, you are going to learn about the eighth data-type(JavaScript object). JavaScript object is a non-primitive data-type that allows you to store multiple
+            collections of data.
+        </p>
+        <blockquote><span class='mark'>Note:</span> If you are familiar with other programming languages, JavaScript objects are a bit different. You do not need to create classes in order to create objects.
+        </blockquote>
+        <ul>Here is an example of a JavaScript object.
+            <pre class='line-numbers' data-src='./js/snippets/04.objects/01/01.js' eval js-tutor></pre>
+            <li>Here, <code>student</code> is an object that stores values such as strings and numbers.</li>
+        </ul>
+​
+​<!--To create new subsection copy from this line to the line I mention down-->
+        <article class="code-article hline ">
+            <!--Here the sub-subtitle in the section between h4-->
+            <h4>JavaScript Declare Objects</h4>
+            The syntax to declare an object is:
+            <ul>
+<!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/01/02.js' eval js-tutor></pre>
+                <li>Here, an object <code>object_name</code> is defined. Each member of an object is a <span class='mark'>key: value</span> pair separated by commas and enclosed in curly braces <code>{}</code></li>
+                <li>For example,</li>
+                <pre class='line-numbers ' data-src='./js/snippets/04.objects/01/03.js ' eval js-tutor></pre>
+                <li>You can also define an object in a single line.</li>
+                <pre class='line-numbers ' data-src='./js/snippets/04.objects/01/04.js ' eval js-tutor></pre>
+                <li>In the above example, <code>name</code> and <code>age</code> are keys, and <code>John</code> and <code>20</code> are values respectively. There are other ways to declare an object in JavaScript. To learn more, visit Different
+                    ways to declare JavaScript objects.
+                </li>
+            </ul>
+        </article>
+<!--copy until here to create subsection-->
+​
+            
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+​
+    <h4>JavaScript Object Properties</h4>
+    In JavaScript, "key: value" pairs are called properties. For example,
+    <ul>
+        <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/01/05.js' eval js-tutor></pre>
+        <li>Here, <code>name : 'John'</code> and <code>age : 20</code> are properties.</li>
+        <img src="./img/objects.png" alt="js Object Properties">
+    </ul>
+</article>
+<!--copy until here to create subsection-->
 
-                    <!-------------------- New subsection -------------------->
-                    <!--To create new subsection copy from this line to the line I mention down-->
-                    <article class="code-article hline">
-                        <!--Here the sub-subtitle in the section between h4-->
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>Accessing Object Properties</h4>
+    You can access the value of a property by using its key.
+    ​
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        ​<h5>1. Using dot Notation</h5>
+        For example,
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/01/06.js' eval js-tutor></pre>
+        <h5>2. Using bracket Notation</h5>
+        Here is the syntax of the bracket notation.
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/01/07.js' eval js-tutor></pre>
+        For example,
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/01/08.js' eval js-tutor></pre>
+    </ul>
+</article>
+<!--copy until here to create subsection-->           
+​
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>JavaScript Nested Objects</h4>
+    An object can also contain another object. For example,​
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/01/09.js' eval js-tutor></pre>
+        In the above example, an object student contains an object value in the marks property.
+    </ul>
+</article>
+<!--copy until here to create subsection-->
 
-                        <h4>Subsubsection title </h4>
-                        Explanation <code>//</code> is a comment. For example,
-                        <ul>
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>JavaScript Object Methods</h4>
+    In JavaScript, an object can also contain a function. For example,​
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/01/10.js' eval js-tutor></pre>
+        Here, a function is used as a value for the greet key. That's why we need to use <code>person.greet()</code> instead of <code>person.greet</code> to call the function inside the object.
 
-                            <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        A JavaScript method is a property containing a function declaration. In the next tutorial, you will learn about JavaScript Methods in detail.
+    </ul>
+</article>
+<!--copy until here to create subsection-->
 
-                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/00-01.js' eval js-tutor></pre>
-                            <br> Here, <code>// printing name on the console</code> is a comment.</br>
-                            <br> You can also use single like comment like this:</br>
-                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/00-02.js' eval js-tutor></pre>
 
-                        </ul>
-                    </article>
-                    <!--copy until here to create subsection-->
-                </div>
-                <!--copy until here to create section-->
-            </article>
-        </div>
-    </section>
+    <!-------------------- New section -------------------->
+        <!--To create new section copy from this line to the line I mention down-->
+        <div class="code-block">
+            <h1 class="page-title">
+                <!--Here paste the href you copy from above in place of ___ in id="___ "-->
+                <!--Also here  you should write the subtitle in the section in white color if you use vsc-->
+                <span id="#methiskey">JavaScript Methods & this Keyword</span>
+            </h1>
+            <!--This is the main statement -->
+    
+            <article class="hline ">
+                In JavaScript, objects can also contain functions. For example,
+            </p>
+            <ul>
+                <pre class='line-numbers' data-src='./js/snippets/04.objects/02/01.js' eval js-tutor></pre>
+                <li>In the above example, a <code>person</code> object has a key( <code>name</code> and <code>greet</code> ) and string value and a function value.
+
+                    Hence basically, the JavaScript method is an object property that has a function value.</li>
+            </ul>
+    ​</article>
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>Accessing Object Methods</h4>
+    You can access a method by calling an objectName and a key for that method along with <code>()</code>. And you can access property only by calling an objectName and a key. For example,
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/02/02.js' eval js-tutor></pre>
+        Here, the <code>greet</code> method is accessed as <code>person.greet()</code> instead of <code>person.greet</code>.
+
+        If you try to access the method with only <code>person.greet</code>, it will give you a function definition.
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>JavaScript Built-In Methods</h4>
+    In JavaScript, there are many built-in methods. For example,
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/02/03.js' eval js-tutor></pre>
+        Here, the <code>parseInt()</code> method of Number object is used to convert numeric string value to an integer value.
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>Adding a Method to a JavaScript Object</h4>
+    You can also add a method in an object. For example,
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/02/04.js' eval js-tutor></pre>
+        In the above example, an empty <code>student</code> object is created. Then, the <code>name</code> property is added. Similarly, the <code>greet</code> method is also added. In this way, you can add a method as well as property to an object.
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>JavaScript this Keyword</h4>
+    To access a property of an object from within a method of the same object, you need to use the <code>this</code> keyword. Let's consider an example.
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/02/05.js' eval js-tutor></pre>
+        In the above example, a <code>person</code> object is created. It contains properties(<code>name</code> and <code>age</code>) and a method greet.
+
+        In the method <code>greet</code>, while accessing a property of an object, <code>this</code> keyword is used.
+
+        In order to access the properties of an object, <code>this</code> keyword is used following with <code>.</code> and key.
+        <blockquote><span class='mark'>Note:</span> In JavaScript, <code>this</code> keyword when used with the object's method refers to the object. <code>this</code> is bound to an object.
+        </blockquote>
+        However, the function inside of an object can access it's variable in a similar way as a normal function would. For example,
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/02/06.js' eval js-tutor></pre>
+
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+
+<!-------------------- New section -------------------->
+        <!--To create new section copy from this line to the line I mention down-->
+        <div class="code-block">
+            <h1 class="page-title">
+                <!--Here paste the href you copy from above in place of ___ in id="___ "-->
+                <!--Also here  you should write the subtitle in the section in white color if you use vsc-->
+                <span id="#consfun">JavaScript Constructor Function</span>
+            </h1>
+            <!--This is the main statement -->
+    
+            <article class="hline ">
+                In JavaScript, objects can also contain functions. For example,
+            </p>
+            <ul>
+                <pre class='line-numbers' data-src='./js/snippets/04.objects/03/01.js' eval js-tutor></pre>
+                <li>In the above example, <code>function Person()</code> is an object constructor function.
+
+                    To create an object from a constructor function, we use the <code>new</code> keyword.
+
+                    Hence basically, the JavaScript method is an object property that has a function value.</li>
+                <blockquote><span class='mark'>Note:</span> It is considered a good practice to capitalize the first letter of your constructor function.
+                </blockquote>
+            </ul>
+    ​</article>
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>Create Multiple Objects with Constructor Function</h4>
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/03/02.js' eval js-tutor></pre>
+        In the above program, two objects are created using the same constructor function.
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>JavaScript this Keyword</h4>
+    In JavaScript, when <code>this</code> keyword is used in a constructor function, <code>this</code> refers to the object when the object is created. For example,
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/03/03.js' eval js-tutor></pre>
+        Hence, when an object accesses the properties, it can directly access the property as <code>person1.name</code>.
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>JavaScript Constructor Function Parameters</h4>
+    You can also create a constructor function with parameters. For example,
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/03/04.js' eval js-tutor></pre>
+        In the above example, we have passed arguments to the constructor function during the creation of the object.
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/03/05.js' eval js-tutor></pre>
+        This allows each object to have different properties. As shown above,
+
+        <code>console.log(person1.name)</code>; gives <code>John</code>
+
+        <code>console.log(person2.name)</code>; gives <code>Sam</code>
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>Create Objects: Constructor Function Vs Object Literal</h4>
+        <li>Object Literal is generally used to create a single object. The constructor function is useful if you want to create multiple objects. For example,</li>
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/03/06.js' eval js-tutor></pre>
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/03/07.js' eval js-tutor></pre>
+        <li>Each object created from the constructor function is unique. You can have the same properties as the constructor function or add a new property to one particular object. For example,</li>
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/03/08.js' eval js-tutor></pre>
+        Now this age property is unique to <code>person1</code> object and is not available to <code>person2</code> object.
+
+        However, if an object is created with an object literal, and if a variable is defined with that object value, any changes in variable value will change the original object. For example,
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/03/09.js' eval js-tutor></pre>
+        When an object is created with an object literal, any object variable derived from that object will act as a clone of the original object. Hence, any change you make in one object will also reflect in the other object.
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>Adding Properties And Methods in an Object</h4>
+    You can add properties or methods in an object like this:
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/03/10.js' eval js-tutor></pre>
+        In the above example, a new property <code>gender</code> and a new method <code>greet()</code> is added to the <code>person1</code> object.
+
+        However, this new property and method is only added to <code>object1</code>. You cannot access <code>gender</code> or <code>greet()</code> from <code>object2</code>. Hence the program gives error when we try to access <code>person2.greet()</code>;
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>JavaScript Object Prototype</h4>
+    You can also add properties and methods to a constructor function using a prototype. For example,
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/03/11.js' eval js-tutor></pre>
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>JavaScript Built-in Constructors</h4>
+    JavaScript also has built-in constructors. Some of them are:
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/03/12.js' eval js-tutor></pre>
+        In JavaScript, strings can be created as an object by:
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/03/13.js' eval js-tutor></pre>
+        In JavaScript, numbers can be created as an object by:
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/03/14.js' eval js-tutor></pre>
+        In JavaScript, booleans can be created as an object by:
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/03/15.js' eval js-tutor></pre>
+        <blockquote><span class='mark'>Note:</span> It is recommended to use primitive data types and create them in a normal way, such as <code>const name = 'John';</code>, <code>const number = 57;</code> and <code>const count = true;</code>
+
+            You should not declare strings, numbers, and boolean values as objects because they slow down the program.
+        </blockquote>
+        <blockquote><span class='mark'>Note:</span> In JavaScript, the keyword <code>class</code> was introduced in ES6 (ES2015) that also allows us to create objects. Classes are similar to constructor functions in JavaScript.
+        </blockquote>
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+
+
+    <!-------------------- New section -------------------->
+        <!--To create new section copy from this line to the line I mention down-->
+        <div class="code-block">
+            <h1 class="page-title">
+                <!--Here paste the href you copy from above in place of ___ in id="___ "-->
+                <!--Also here  you should write the subtitle in the section in white color if you use vsc-->
+                <span id="#proto">JavaScript Prototype</span>
+            </h1>
+            <!--This is the main statement -->
+            <p class="hline ">
+                Before you learn prototypes, be sure to check these tutorials:
+            </p>
+            <ul>Here is an example of a JavaScript object.
+                <li>JavaScript Objects</li>
+                <li>JavaScript Constructor Function</li>
+                As you know, you can create an object in JavaScript using an object constructor function. For example,
+                <pre class='line-numbers' data-src='./js/snippets/04.objects/04/01.js' eval js-tutor></pre>
+                In the above example,<code>function Person()</code> is an object constructor function. We have created two objects <code>person1</code> and <code>person2</code> from it.
+            </ul>
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>JavaScript Prototype</h4>
+    In JavaScript, every function and object has a property named prototype by default. For example,
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/04/02.js' eval js-tutor></pre>
+        In the above example, we are trying to access the prototype property of a <code>Person</code> constructor function.
+
+        Since the prototype property has no value at the moment, it shows an empty object <code>{ ... }</code>.
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>Prototype Inheritance</h4>
+    In JavaScript, a prototype can be used to add properties and methods to a constructor function. And objects inherit properties and methods from a prototype. For example,
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/04/03.js' eval js-tutor></pre>
+        In the above program, we have added a new property <code>gender</code> to the <code>Person</code> constructor function using:
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/04/04.js' eval js-tutor></pre>
+        Then object <code>person1</code> and <code>person2</code> inherits the property <code>gender</code> from the prototype property of <code>Person</code> constructor function.
+        Hence, both objects <code>person1</code> and <code>person2</code> can access the <code>gender</code> property.
+        <blockquote><span class='mark'>Note:</span> The syntax to add the property to an object constructor function is:
+            <pre class='line-numbers' data-src='./js/snippets/04.objects/04/05.js' eval js-tutor></pre>
+        </blockquote>
+        Prototype is used to provide additional property to all the objects created from a constructor function.
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>Add Methods to a Constructor Function Using Prototype</h4>
+    You can also add new methods to a constructor function using prototype. For example,
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/04/06.js' eval js-tutor></pre>
+        In the above program, a new method <code>greet</code> is added to the <code>Person</code> constructor function using a prototype.
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>Changing Prototype</h4>
+    If a prototype value is changed, then all the new objects will have the changed property value. All the previously created objects will have the previous value. For example,
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/04/07.js' eval js-tutor></pre>
+        In the above program, a new method <code>greet</code> is added to the <code>Person</code> constructor function using a prototype.
+        <blockquote><span class='mark'>Note:</span> You should not modify the prototypes of standard JavaScript built-in objects like strings, arrays, etc. It is considered a bad practice.
+        </blockquote>
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>JavaScript Prototype Chaining</h4>
+    If an object tries to access the same property that is in the constructor function and the prototype object, the object takes the property from the constructor function. For example,
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/04/08.js' eval js-tutor></pre>
+        In the above program, a property <code>name</code> is declared in the constructor function and also in the prototype property of the constructor function.
+
+        When the program executes, <code>person1.name</code> looks in the constructor function to see if there is a property named <code>name</code>. Since the constructor function has the name property with value <code>'John'</code>, the object takes value from that property.
+
+        When the program executes, <code>person1.age</code> looks in the constructor function to see if there is a property named <code>age</code>. Since the constructor function doesn't have <code>age</code> property, the program looks into the prototype object of the constructor function and the object inherits property from the prototype object(if available).
+
+
+        <blockquote><span class='mark'>Note:</span> You can also access the prototype property of a constructor function from an object.
+        </blockquote>
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/04/09.js' eval js-tutor></pre>
+        In the above example, a <code>person</code> object is used to access the prototype property using <code>__proto__</code>. However, <code>__proto__</code> has been deprecated and you should avoid using that.
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+
+
+    <!-------------------- New section -------------------->
+        <!--To create new section copy from this line to the line I mention down-->
+        <div class="code-block">
+            <h1 class="page-title">
+                <!--Here paste the href you copy from above in place of ___ in id="___ "-->
+                <!--Also here  you should write the subtitle in the section in white color if you use vsc-->
+                <span id="#getset">JavaScript Getter and Setter</span>
+            </h1>
+            <!--This is the main statement -->
+            <p class="hline ">
+                In JavaScript, there are two kinds of object properties:
+            </p>
+            <ul>
+                <li>Data properties</li>
+                <li>Accessor properties</li>
+            </ul>
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>Data Property</h4>
+    Here's an example of data property that we have been using in the previous tutorials.
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/05/01.js' eval js-tutor></pre>
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>Accessor Property</h4>
+    In JavaScript, accessor properties are methods that get or set the value of an object. For that, we use these two keywords:
+    <ul>
+        <li><code>get</code> - to define a getter method to get the property value</li>
+        <li><code>set</code> - to define a setter method to set the property value</li>
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>JavaScript Getter</h4>
+    In JavaScript, getter methods are used to access the properties of an object. For example,
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/05/02.js' eval js-tutor></pre>
+        In the above program, a getter method <code>getName()</code> is created to access the property of an object.
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/05/03.js' eval js-tutor></pre>
+        <blockquote><span class='mark'>Note:</span> To create a getter method, the <code>get</code> keyword is used.
+        </blockquote>
+        And also when accessing the value, we access the value as a property.
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/05/04.js' eval js-tutor></pre>
+        When you try to access the value as a method, an error occurs.
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/05/05.js' eval js-tutor></pre>
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>JavaScript Setter</h4>
+    In JavaScript, setter methods are used to change the values of an object. For example,
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/05/06.js' eval js-tutor></pre>
+        In the above example, the setter method is used to change the value of an object.
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/05/07.js' eval js-tutor></pre>
+        <blockquote><span class='mark'>Note:</span> To create a setter method, the <code>set</code> keyword is used.
+        </blockquote>
+        As shown in the above program, the value of <code>firstName</code> is <code>Monica</code>.
+
+        Then the value is changed to <code>Sarah</code>.
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/05/08.js' eval js-tutor></pre>
+        <blockquote><span class='mark'>Note:</span> Setter must have exactly one formal parameter.
+        </blockquote>
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
+
+<!--To create new subsection copy from this line to the line I mention down-->
+<article class="code-article hline ">
+    <!--Here the sub-subtitle in the section between h4-->
+    <h4>JavaScript Object.defineProperty()</h4>
+    In JavaScript, you can also use Object.defineProperty() method to add getters and setters. For example,
+    <ul>
+    <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/05/09.js' eval js-tutor></pre>
+        In the above example, <code>Object.defineProperty()</code> is used to access and change the property of an object.
+
+        The syntax for using <code>Object.defineProperty()</code> is:
+        <pre class='line-numbers' data-src='./js/snippets/04.objects/05/10.js' eval js-tutor></pre>
+        The <code>Object.defineProperty()</code> method takes three arguments.
+    <li>1. The first argument is the objectName.</li>
+    <li>2. The second argument is the name of the property.</li>
+    <li>3. The third argument is an object that describes the property.</li>
+    </ul>
+</article>
+<!--copy until here to create subsection-->
+
 
 
     <!-------------------- Don't change anything down -------------------->

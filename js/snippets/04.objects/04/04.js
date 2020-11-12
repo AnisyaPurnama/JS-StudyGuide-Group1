@@ -1,0 +1,1 @@
+Person.prototype.gender = 'male';

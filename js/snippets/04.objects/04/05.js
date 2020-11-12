@@ -1,0 +1,1 @@
+objectConstructorName.prototype.key = 'value';
