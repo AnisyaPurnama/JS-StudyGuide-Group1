@@ -100,42 +100,527 @@
                     <h1 class="page-title">
                         <!--Here paste the href you copy from above in place of ___ in id="___"-->
                         <!--Also here  you should write the subtitle in the section in white color if you use vsc-->
-                        <span id="jsComments">subsection title</span>
+                        <span id="#jsclos">JavaScript Closures</span>
                     </h1>
                     <!--This is the main statment -->
                     <p class="hline">
-                        main statement
+                      In this tutorial, you will learn about JavaScript closures with the help of examples.<br>
+
+                      Before you learn about closures, you need to understand two concepts:<br>
+                     <ul>
+                      <li>Nested Function</li>
+                      <li>Returning a function</li>
+                  </ul>
                     </p>
-                    <article class="code-article hline">
-                        There are two ways to add comments to code:
-                        <ul>
-                            <li><code>//</code> - Single Line Comments</li>
-                        </ul>
-                    </article>
+
 
                     <!-------------------- New subsection -------------------->
                     <!--To create new subsection copy from this line to the line I mention down-->
                     <article class="code-article hline">
                         <!--Here the sub-subtitle in the section between h4-->
-
-                        <h4>Subsubsection title </h4>
-                        Explanation <code>//</code> is a comment. For example,
+                        <!-- JavaScript nasted function start-->
+                        <h4>JavaScript Nested Function </h4>
+                        In JavaScript, a function can also contain another function. This is called a nested function. For example,
                         <ul>
 
                             <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
 
-                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/00-01.js' eval js-tutor></pre>
-                            <br> Here, <code>// printing name on the console</code> is a comment.</br>
-                            <br> You can also use single like comment like this:</br>
-                            <pre class='line-numbers' data-src='./js/snippets/01.introduction/00-02.js' eval js-tutor></pre>
+                            <pre class='line-numbers' data-src='./js/snippets/05.js/001.js' eval js-tutor></pre>
+
+                            <br>In the above program, the <code>greet()</code> function contains the <code>displayName()</code> function inside of it.
 
                         </ul>
                     </article>
+                    <!--javascript nasted function ends here-->
                     <!--copy until here to create subsection-->
-                </div>
-                <!--copy until here to create section-->
-            </article>
-        </div>
+
+                    <!-- JavaScript Returning function starts here-->
+                    <article class="code-article hline">
+
+                         <h4>Returning a Function </h4>
+                        In JavaScript, you can also return a function within a function. For example,
+
+                        <ul>
+
+                            <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+
+                            <pre class='line-numbers' data-src='./js/snippets/05.js/002.js' eval js-tutor></pre>
+                           <br> Output
+                           <pre class='line-numbers' data-src='./js/snippets/05.js/003.js' eval js-tutor></pre>
+
+                        </ul>
+                        In the above program, <code>the greet()</code> function is returning the <code>displayName</code> function definition.
+
+                        Here, the returned function definition is assigned to the g1 variable. When you print <code>g1</code> using console.<code>log(g1)</code>, you will get the function definition.
+
+                        To call the function stored in the <code>g1</code> variable, we use <code>g1()</code> with parenthesis.
+
+                    </article>
+                    <!--javascript retutning function ends here-->
+                    <!--Here the sub-subtitle in the section between h4-->
+
+                    <!--JavaScript closuers stats here-->
+                    <article class="code-article hline">
+
+                    <h4>JavaScript Closures </h4>
+                    In JavaScript, closure provides access to the outer scope of a function from inside the inner function, even after the outer function has closed. For example,
+                    <ul>
+
+                        <!--Every code you want to present, you will copy it from the site and paste it in js file with anumber and just change the number here-->
+
+                        <pre class='line-numbers' data-src='./js/snippets/05.js/003.js' eval js-tutor></pre>
+                       <br> Output
+                       <pre class='line-numbers' data-src='./js/snippets/05.js/004.js' eval js-tutor></pre>
+                       In the above example, when greet() function is called, it returns the function definition of displayName.
+
+                       Here, <code>g1</code> is a reference to the <code>displayName</code> function.
+
+                       When <code>g1()</code> is called, it still has access to the <code> greet()</code> function.
+
+                       When we run <code>console.log(g1)</code>, it returns the function definition.
+                       <br>The concept of closure exists for other programming languages like Python, Swift, Ruby, etc.
+
+                       <br>Let's have a look at another example.
+                       <pre class='line-numbers' data-src='./js/snippets/05.js/005.js' eval js-tutor></pre>
+                       In the above program, the <code>calculate()</code> function takes a single argument <code>x </code>and returns the function definition of the multiply function. The <code>multiply()</code> function takes a single argument <code>y</code> and returns <code>x * y</code>.
+                      </article>
+                      <!--JavaScript celusers ends here-->
+                       <!--javascript Data Privacy starts here-->
+                       <article class="code-article hline">
+                       <h4> Data Privecy</h4>
+                       JavaScript closure helps in the data privacy of the program. For example,
+                       <pre class='line-numbers' data-src='./js/snippets/05.js/006.js' eval js-tutor></pre>
+                       In the above example, the <code> sum()</code> function returns the function definition of the <code>increaseSum</code> function.
+
+                       The a variable is increased inside the <code>increaseSum()</code> function. However, the value of the <code>a</code> variable can also be changed outside of the function. In this case,<code> a = a + 1;</code> changes the value of the variable outside the function.
+
+                      Now, if you want the <code>a</code> variable to be increased only inside the function, you can use a closure. For example,
+                    <ul>  <pre class='line-numbers' data-src='./js/snippets/05.js/007.js' eval js-tutor></pre></ul>
+                      In the above example, the <close>sum()</close> function sets the value of a to 0 and returns the increaseSum function.
+
+                     Because of the closure, even though <close>sum()</close> is already executed, <close>increaseSum()</close> still has access to a and can add 1 to a every time <close>x()</close> is called.
+
+                    And the <code>a</code> variable is private to the <code>sum()</code> function. It means that the <code>a</code> variable can only be accessed inside of the <code>sum()</code> function.
+
+                     Even if you declare <code> a</code> and use it, it does not affect the <close>a</close> variable inside of the <close>sum()</close> function.
+
+                    <blockquote> <span id="mark">Note:</span> Generally, closures are used for data privacy.</blockquote>
+
+
+                    </article>
+
+                <!-- JavaScript Data privecy ands here-->
+                <!-- end of the fitst subtitle-->
+
+                    <!-------------------- JavaScript Date and Time section -------------------->
+                    <!--To create new section copy from this line to the line I mention down-->
+                    <div class="code-block">
+                        <h1 class="page-title">
+                            <!--Here paste the href you copy from above in place of ___ in id="___"-->
+                            <!--Also here  you should write the subtitle in the section in white color if you use vsc-->
+                            <span id="#jsdatime">JavaScript Date and Time</span>
+                        </h1>
+                        <!--This is the main statment -->
+                        <p class="hline">
+                          In this tutorial, you will learn about date and time in JavaScript with the help of examples.
+
+
+In JavaScript, date and time are represented by the Date object. The Date object provides the date and time information and also provides various methods.
+
+A JavaScript date defines the EcmaScript epoch that represents milliseconds since 1 January 1970 UTC. This date and time is the same as the UNIX epoch (predominant base value for computer-recorded date and time values).
+                        </p>
+                        <article class="code-article hline">
+                            There are two ways to add comments to code:
+                            <ul>
+                                <li><code>//</code> - Single Line Comments</li>
+                            </ul>
+                        </article>
+
+                        <!-------------------- New subsection -------------------->
+                        <!--To create new subsection copy from this line to the line I mention down-->
+                        <article class="code-article hline">
+                            <!--Here the sub-subtitle in the section between h4-->
+
+                            <h4>Creating Date Objects </h4>
+                            There are four ways to create a date object.
+                            <ul>
+                              <li> new Date()</li>
+                              <li> new Date(milliseconds)</li>
+                              <li>new Date(Date string)</li>
+                              <li>new Date(year, month, day, hours, minutes, seconds, milliseconds)</li>
+
+                            </ul>
+
+                            <h4>new Date()</h4>
+                            You can create a date object using the new Date() constructor. For example,
+
+                             <ul>
+                               <pre class='line-numbers' data-src='./js/snippets/01.06.js/013.js' eval js-tutor></pre>
+                               <br> Output
+                               <pre class='line-numbers' data-src='./js/snippets/01.06.js/014.js' eval js-tutor></pre>
+                               Here, <code>new Date()</code> creates a new date object with the current date and local time.
+
+                             </ul>
+
+                             <h4>new Date(milliseconds)</h4>
+                             The Date object contains a number that represents milliseconds since 1 January 1970 UTC.
+
+                          new <code>Date(milliseconds)</code> creates a <code>new date</code> object by adding the <code>milliseconds</code> to the zero time. For example,
+                      <ul>
+                        <pre class='line-numbers' data-src='./js/snippets/01.06.js/001.js' eval js-tutor></pre>
+                       <blockquote >
+                        <span class='mark'> Note:</span> 1000 milliseconds is equal to 1 second.
+
+
+                       </blockquote>
+                     </ul>
+                     <h4> new Date(date string)</h4>
+                     <code>new Date(date string)</code> creates a new date object from a date string.
+
+In JavaScript, there are generally three date input formats.
+
+                    <h4>ISO Date Formats</h4>
+                    You can create a date object by passing ISO date formats. For example,
+
+
+                    <ul>
+                      <pre class='line-numbers' data-src='./js/snippets/01.06.js/002.js' eval js-tutor></pre>
+                      You can also pass only the year and month or only the year. For example,
+                      <pre class='line-numbers' data-src='./js/snippets/01.06.js/003.js' eval js-tutor></pre>
+                      You can also pass specific time to ISO dates.
+                      <pre class='line-numbers' data-src='./js/snippets/01.06.js/004.js' eval js-tutor></pre>
+<blockquote>
+<span class="mark">  Note: </span>Date and time are separated with capital letter <span class="mark">T</span>. And UTC time is defined with capital <span class="mark"> Z</span>.
+</blockquote>
+                     </ul>
+                     <h4>Short and Long date format</h4>
+                     The other two date formats are <span class="mark">short date </span>format and <span class="mark">long date format.</span>
+                    <ul> <br><pre class='line-numbers' data-src='./js/snippets/01.06.js/005.js' eval js-tutor></pre> </ul>
+
+                     <h4>new Date(year, month, day, hours, minutes, seconds, milliseconds)</h4>
+<code>new Date(year, month,...)</code> creates a new date object by passing specific date and time. For example,
+                    <ul>
+                      <pre class='line-numbers' data-src='./js/snippets/01.06.js/006.js' eval js-tutor></pre>
+                      The passed argument has a specific order.
+
+                     <br>If four numbers are passed, it represents year, month, day and hours. For example,
+                     <pre class='line-numbers' data-src='./js/snippets/01.06.js/007.js' eval js-tutor></pre>
+                     Similarly, if two arguments are passed, it represents year and month. For example,
+                     <pre class='line-numbers' data-src='./js/snippets/01.06.js/008.js' eval js-tutor></pre>
+<blockquote>
+  <span class="mark">Note:</Span> If you pass only one argument, it is treated as milliseconds. Hence, you have to pass two arguments to use this date format.
+
+In JavaScript, months are counted from <span class="mark">0 to 11</span>. January is <span class="mark">0 </span>and December is <span class="mark">11</span>.
+
+
+</blockquote>
+
+                    </ul>
+                    <h4>JavaScript Date Methods</h4>
+                    There are various methods available in JavaScript Date object.
+                 <table style="width:70%">
+                   <tr>
+                    <th> <strong>Method</strong></th>
+                    <th><strong>Description</strong></th>
+                    </tr>
+                    <tr>
+                      <th>now()</th>
+                      <th>Returns the numeric value corresponding to the current time(the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC)</th>
+                    </tr>
+                    <tr>
+                      <th>getFullYear()	</th>
+                      <th>Gets the year according to local time</th>
+                    </tr>
+                    <tr>
+                      <th>getMonth()</th>
+                      <th>Gets the month, from 0 to 11 according to local time</th>
+                    </tr>
+                    <tr>
+                      <th>getDate()	</th>
+                      <th>Gets the day of the month(1–31) according to local time</th>
+                    </tr>
+                    <tr>
+                      <th>getDay()</th>
+                      <th>Gets the day of the week(0-6) according to local time</th>
+                    </tr>
+                    <tr>
+                      <th>getHours()</th>
+                      <th>Gets the hour from 0 to 23 according to local time</th>
+                    </tr>
+                    <tr>
+                      <th>getMinutes</th>
+                      <th>Gets the minute from 0 to 59 according to local time</th>
+                    </tr>
+                    <tr>
+                      <th>getUTCDate()</th>
+                      <th>Gets the day of the month(1–31) according to universal time</th>
+                    </tr>
+                    <tr>
+                      <th>setFullYear()</th>
+                      <th>Sets the full year according to local time</th>
+                    </tr>
+                    <tr>
+                      <th>setMonth()	</th>
+                      <th>Sets the month according to local time</th>
+                    </tr>
+                    <tr>
+                      <th>setDate()	</th>
+                      <th>Sets the day of the month according to local time</th>
+                    </tr>
+                    <tr>
+                      <th>setUTCDate()	</th>
+                      <th>Sets the day of the month according to universal time</th>
+
+                    </tr>
+                     </table>
+
+                     <h4>Example: Date Methods</h4>
+                     <ul>
+                       <pre class='line-numbers' data-src='./js/snippets/01.06.js/009.js' eval js-tutor></pre>
+                     </ul>
+                     <h4>Formatting a Date</h4>
+                     Unlike other programming languages, JavaScript does not provide a built-in function for formatting a date.
+
+        <br>However, you can extract individual bits and use it like this.
+        <pre class='line-numbers' data-src='./js/snippets/01.06.js/010.js' eval js-tutor></pre>
+              <blockquote>
+              <span class="mark">  Note:</span> The above program gives inconsistent length as date and month have single-digit and double-digit.
+              </blockquote>
+            <h4>AutoCorrection in Date Object</h4>
+            When you assign out of range values in the Date object, it auto-corrects itself. For example,
+             <ul>
+               <pre class='line-numbers' data-src='./js/snippets/01.06.js/011.js' eval js-tutor></pre>
+             Output
+             <pre class='line-numbers' data-src='./js/snippets/01.06.js/012.js' eval js-tutor></pre>
+
+             </ul>
+
+                        </article>
+                        <!--copy until here to create subsection-->
+                        <!--end of second section-->
+                        <!-------------------- JavaScript and JSON section -------------------->
+                        <div class="code-block">
+                            <h1 class="page-title">
+                                <!--Here paste the href you copy from above in place of ___ in id="___"-->
+                                <!--Also here  you should write the subtitle in the section in white color if you use vsc-->
+                                <span id="#json">JavaScript and JSON</span>
+                            </h1>
+                            <!--This is the main statment -->
+                            <p class="hline">
+                              In this tutorial, you will learn about JSON and how JavaScript is used with JSON with the help of examples.
+
+
+                             JSON stands for Javascript Object Notation. JSON is a text-based data format that is used to store and transfer data. For example,
+                            </p>
+
+                            <article class="code-article hline">
+                              <ul>
+                                <pre class='line-numbers' data-src='./js/snippets/07.js/001.js' eval js-tutor></pre>
+
+                              </ul>
+                              In JSON, the data are in <span class="mark">key/value</span> pairs separated by a comma ,.
+
+                             JSON was derived from JavaScript. So, the JSON syntax resembles JavaScript object literal syntax. However, the JSON format can be accessed and be created by other programming languages too.
+                              <blockquote>
+                                <span class="mark">Note:</span> JavaScript Objects and JSON are not the same. You will learn about their differences later in this tutorial.
+                              </blockquote>
+                            </article>
+
+                            <!-------------------- New subsection -------------------->
+                            <!--To create new subsection copy from this line to the line I mention down-->
+                            <article class="code-article hline">
+                                <!--Here the sub-subtitle in the section between h4-->
+
+                                <h4>JSON Data </h4>
+                                JSON data consists of key/value pairs similar to JavaScript object properties. The key and values are written in double quotes separated by a colon :. For example,
+
+
+                                <ul>
+                                  <pre class='line-numbers' data-src='./js/snippets/07.js/002.js' eval js-tutor></pre>
+
+
+                                </ul>
+                                <blockquote>
+                                <span class="mark">  Note:</span> JSON data requires double quotes for the key.
+                                </blockquote>
+                               <h4>JSON Object</h4>
+                               The JSON object is written inside curly braces { }. JSON objects can contain multiple <span class="mark"> key/value</span> pairs. For example,
+                               <ul>
+                                 <pre class='line-numbers' data-src='./js/snippets/07.js/003.js' eval js-tutor></pre>
+
+                               </ul>
+
+                               <h4>JSON Array</h4>
+                               JSON array is written inside square brackets [ ]. For example,
+
+
+                               <ul>
+                                 <pre class='line-numbers' data-src='./js/snippets/07.js/004.js' eval js-tutor></pre>
+
+                               </ul>
+                               <blockquote>
+                                 <span class="mark">Note:</span> JSON data can contain objects and arrays. However, unlike JavaScript objects, JSON data can not contain functions as values.
+                              </blockquote>
+                              <h4>Accessing JSON Data</h4>
+                              You can access the JSON data using the dot notation. For example,
+                            <ul>  <pre class='line-numbers' data-src='./js/snippets/07.js/005.js' eval js-tutor></pre> </ul>
+                            We use the . notation to access JSON data. Its syntax is: variableName.key
+
+
+                            <br>You can also use square bracket syntax [] to access JSON data. For example,
+                            <ul>  <pre class='line-numbers' data-src='./js/snippets/07.js/006.js' eval js-tutor></pre> </ul>
+                             <h4>JavaScript Objects VS JSON</h4>
+                             Though the syntax of JSON is similar to the JavaScript object, JSON is different from JavaScript objects.
+                             <table>
+                               <tr>
+                                 <th>JSON</th>
+                                 <th>JavaScript Object</th>
+                               </tr>
+                               <tr>
+                                 <th>The key in key/value pair should be in double quotes.</th>
+                                 <th>The key in key/value pair can be without double quotes.</th>
+                               </tr>
+                               <tr>
+                                 <th>JSON cannot contain functions.</th>
+                                 <th>JavaScript objects can contain functions.</th>
+                               </tr>
+                               <tr>
+                                 <th>JSON can be created and used by other programming languages.</th>
+                                 <th>JavaScript objects can only be used in JavaScript.</th>
+                               </tr>
+                             </table>
+
+                             <h4>Converting JSON to JavaScript Object</h4>
+                             You can convert JSON data to a JavaScript object using the built-in JSON.parse() function. For example,
+                             <ul>  <pre class='line-numbers' data-src='./js/snippets/07.js/007.js' eval js-tutor></pre> </ul>
+                             <h2>Converting JavaScript Object to JSON</h2>
+                             You can also convert JavaScript objects to JSON format using the JavaScript built-in <code>JSON.stringify()</code> function. For example,
+                             <ul>  <pre class='line-numbers' data-src='./js/snippets/07.js/008.js' eval js-tutor></pre> </ul>
+                             <h4>Use of JSON</h4>
+                             JSON is the most commonly used format for transmitting data (data interchange) from a server to a client and vice-versa. The JSON data are very easy to parse and use. It is fast to access and manipulate JSON data as they only contain texts.
+
+                            <br>JSON is language independent. You can create and use JSON in other programming languages too.
+                            <!-------------------- Javascript setInterval() section -------------------->
+                            <!--To create new section copy from this line to the line I mention down-->
+                            <div class="code-block">
+                                <h1 class="page-title">
+                                    <!--Here paste the href you copy from above in place of ___ in id="___"-->
+                                    <!--Also here  you should write the subtitle in the section in white color if you use vsc-->
+                                    <span id="jsComments">Javascript setInterval()</span>
+                                </h1>
+                                <!--This is the main statment -->
+                                <p class="hline">
+                                  In this tutorial, you will learn about the JavaScript setInterval() method with the help of examples.
+                                  In JavaScript, a block of code can be executed in specified time intervals. These time intervals are called timing events.
+                                  There are two methods for executing code at specific intervals. They are:
+                                  <ul>
+
+                                  <li>setInterval()</li>
+                                  <li>setTimeout()</li>
+                                </ul>
+
+                              <br>In this tutorial, you will learn about the setInterval() method.
+
+
+
+                                </article>
+
+                                <!-------------------- New subsection -------------------->
+                                <!--To create new subsection copy from this line to the line I mention down-->
+                                <article class="code-article hline">
+                                    <!--Here the sub-subtitle in the section between h4-->
+
+                                    <h4>JavaScript setInterval() </h4>
+                                    The <code>setInterval()</code> method repeats a block of code at every given timing event.
+                                    The commonly used syntax of JavaScript setInterval is:
+                                    <pre class='line-numbers' data-src='./js/snippets/08/001.js' eval js-tutor></pre>
+                                    Its parameters are:
+                                    <ul>
+                                    <li><span class="mark">function</span> - a function containing a block of code</li>
+                                    <li><span class="mark">milliseconds</span> - the time interval between the execution of the function</li>
+                                  </ul>
+                                  The <code>setInterval()</code> method returns an <span class="mark">intervalID</span> which is a positive integer.
+                                     <!--new subtitle-->
+                                    <h4>Example 1: Display a Text Once Every 1 Second</h4>
+                                    <ul>
+                                      <pre class='line-numbers' data-src='./js/snippets/08/002.js' eval js-tutor></pre>
+                                      Output
+                                      <pre class='line-numbers' data-src='./js/snippets/08/003.js' eval js-tutor></pre>
+                                    </ul>
+                                In the above program, the setInterval() method calls the greet() function every 1000 milliseconds(1 second).
+                                <br>Hence the program displays the text Hello world once every 1 second.
+                                <blockquote>
+                                  <span class="mark">Note:</span> The setInterval() method is useful when you want to repeat a block of code multiple times. For example, showing a message at a fixed interval.
+                                </blockquote>
+                                <!--new subtitle-->
+                                <h4>Example 2: Display Time Every 5 Seconds</h4>
+                                <pre class='line-numbers' data-src='./js/snippets/08/004.js' eval js-tutor></pre>
+                                Output
+                                <pre class='line-numbers' data-src='./js/snippets/08/005.js' eval js-tutor></pre>
+                                The above program displays the current time once every 5 seconds.
+                                 <code>newDate()</code> gives the current date and time. And <code>toLocaleTimeString()</code> returns the current time. To learn more about date and time, visit <span class="mark">JavaScript Date and Time.</span>
+                                 <!--new subtitle-->
+                                 <h4>JavaScript clearInterval()</h4>
+                                 As you have seen in the above example, the program executes a block of code every specified time interval. If you want to stop this function call, then you can use the <code>clearInterval()</code> method.
+                                 <br>The syntax of <code>clearInterval()</code> method is:
+                                 <pre class='line-numbers' data-src='./js/snippets/08/006.js' eval js-tutor></pre>
+                                 Here, the <code>intervalID</code> is the return value of the <code>setInterval()</code> method.
+                                 <!--new sutitle-->
+                                 <h4>Example 3: Use clearInterval() Method</h4>
+                                 <pre class='line-numbers' data-src='./js/snippets/08/007.js' eval js-tutor></pre>
+                                 Output
+                                 <pre class='line-numbers' data-src='./js/snippets/08/008.js' eval js-tutor></pre>
+                                 In the above program, the <code>setInterval()</code> method is used to display the current time every 2 seconds. The <code>clearInterval()</code> method stops the function call after 5 times.
+                                 <br>You can also pass additional arguments to the setInterval() method. The syntax is:
+                                 <pre class='line-numbers' data-src='./js/snippets/08/009.js' eval js-tutor></pre>
+                                 When you pass additional parameters to the <code>setInterval()</code> methods, these parameters <code>(parameter1,</code><code> parameter2,</code> etc.) will be passed to the specified function.
+                                 <pre class='line-numbers' data-src='./js/snippets/08/010.js' eval js-tutor></pre>
+                                 Output
+                                 <pre class='line-numbers' data-src='./js/snippets/08/011.js' eval js-tutor></pre>
+                                 n the above program, two parameters John and Doe are passed to the <code>setInterval()</code> method These two parameters are the arguments that will be passed to the function that is defined inside the <code>setInterval()</code> method.
+                                 <blockquote>
+                                  <span class="mark"> Note:</span> If you only need to execute a function one time, it's better to use the<span class="mark"> setTimeout() method.</span>
+
+                                 </blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </article>
+
+
+
+
+
+                            </article>
+                    </div>
+                    <!--copy until here to create section-->
+                </article>
+
     </section>
 
 
